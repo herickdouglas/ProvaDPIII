@@ -1,0 +1,61 @@
+package br.edu.univas.vo;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import br.edu.univa.Aluno;
+import br.edu.univa.Mestrado;
+import br.edu.univa.PosGraduacao;
+
+public class App {
+	
+    static Scanner sc = new Scanner(System.in);
+    static ArrayList <PosGraduacao> progradList = new ArrayList<PosGraduacao> ();
+    static ArrayList <Mestrado> mestradoList = new ArrayList<Mestrado> ();
+   
+
+public static void main (String[]args){
+
+    int opcao;
+
+    do {
+		System.out.println("\n\n");
+        System.out.println("---- Tela De Cadastro> ------");
+        System.out.println("-----1 - Cadastrar-----------");
+        System.out.println("-----2 - Listar Mestrado-----");
+        System.out.println("-----3 - listar PosGraduacao-");
+    	
+    }
+
+
+    opcao = sc.nextInt();
+
+        switch (opcao) {
+            case 1:
+                cadastroAluno();
+                break;
+
+            case 2:
+                listarAlunoP();
+                break;
+
+            case 3:
+                listarAlunoM();
+                break;
+
+
+            case 4:
+                fim();
+                break;
+                
+
+        }
+}
+
+
+public static void continuar() {
+    System.out.println("\nPressione enter para voltar ao menu");
+    Scanner scContinuar = new Scanner(System.in);
+    scContinuar.nextLine();
+
+    }
